@@ -29,7 +29,7 @@ class  NetworkErrorManager {
             return NetworkError.response
         }
         
-        if (200..<300).contains(httpResponse.statusCode) {
+        guard (200..<300).contains(httpResponse.statusCode) else {
             return NetworkError.statusCode(httpResponse.statusCode)
         }
         

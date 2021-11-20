@@ -29,7 +29,7 @@ class RequestManager {
             }
             return
         }
-        
+                
         let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
             
             if let error = NetworkErrorManager.shared.checkForErrors(in: response, error: error) {

@@ -14,11 +14,13 @@ struct Endpoint {
     var httpMethod: HTTPMethod
     var path: Path
     var queryItems: [URLQueryItem]?
+    var headers: [HTTPHeader: String]?
     
-    init(method: HTTPMethod, path: Path, queryItems: [URLQueryItem]?) {
+    init(method: HTTPMethod, path: Path, queryItems: [URLQueryItem]? = nil, headers: [HTTPHeader: String]? = nil) {
         self.httpMethod = method
         self.path = path
         self.queryItems = queryItems
+        self.headers = headers
     }
     
     var url: URL? {
@@ -32,12 +34,27 @@ struct Endpoint {
     var urlRequest: URLRequest? {
         return makeUrlRequest()
     }
-   
+    
+    var allHttpHeaders : [String: String]? {
+        var allHeaders : [String: String] = [:]
+        guard let headersList = headers else {
+            return nil
+        }
+        
+        for header in headersList {
+            allHeaders[header.key.rawValue] = header.value
+        }
+        
+        return allHeaders
+        
+    }
+    
     func makeUrlRequest() -> URLRequest? {
         guard let url = url else { return nil }
         
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue
+        request.allHTTPHeaderFields = allHttpHeaders
         
         return request
     }
@@ -51,4 +68,8 @@ enum HTTPMethod : String {
     case patch = "PATCH"
     case post = "POST"
     
+}
+
+enum HTTPHeader: String {
+    case accept = "accept"
 }
