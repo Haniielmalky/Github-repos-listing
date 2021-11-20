@@ -13,7 +13,15 @@ struct Repository: Codable {
     let name: String
     let owner: Owner
     let fullName: String
+    let description: String?
     let creationDate: String?
+    let lastUpdateDate: String?
+    let language: String?
+    let forks : Int?
+    let issuesCount: Int?
+    let visibility: String?
+    let watchers: Int?
+    let starCount: Int?
     
     private enum CodingKeys: String, CodingKey {
         case id
@@ -21,5 +29,13 @@ struct Repository: Codable {
         case owner
         case fullName = "full_name"
         case creationDate = "created_at"
+        case language
+        case forks
+        case issuesCount = "open_issues"
+        case visibility
+        case watchers = "subscribers_count"
+        case starCount = "stargazers_count"
+        case description
+        case lastUpdateDate = "updated_at"
     }
 }

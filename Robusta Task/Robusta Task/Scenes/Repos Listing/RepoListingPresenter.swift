@@ -14,7 +14,7 @@ protocol RepoListingPresenter {
     func searchFor(_ word: String?)
     func didPullToRefresh()
     func didInfiniteScroll()
-    
+    func didSelecetRepo(indexPath: IndexPath)
 }
 
 class RepoListingPresenterImp: RepoListingPresenter {
@@ -26,9 +26,26 @@ class RepoListingPresenterImp: RepoListingPresenter {
     private var searchWord: String?
     private var currentPage : Int?
     private var lastPage : Int?
+    private let singlePageCount = 10
     
     var repoArrayCount: Int? {
-        return reposArray.count
+        guard let currentPage = currentPage else {
+            return 0
+        }
+        let count = currentPage * singlePageCount
+        if searchWord != nil {
+            if count < reposArray.count {
+                return count
+            } else {
+                return reposArray.count
+            }
+        } else {
+            if count < reposOriginalArray.count {
+                return count
+            } else {
+                return reposOriginalArray.count
+            }
+        }
     }
     
     func attach(view: RepoListingView) {
@@ -49,6 +66,11 @@ class RepoListingPresenterImp: RepoListingPresenter {
         cell.display(repoName: repoName, ownerName: ownerName, ownerAvatarUrl: ownerAvatarUrl, creationDate: creationDate)
     }
     
+    func didSelecetRepo(indexPath: IndexPath){
+        let repo = reposOriginalArray[indexPath.item]
+        self.view?.navigateToRepoDetailsDetailsView(repo: repo)
+    }
+    
     func didPullToRefresh() {
         getRepos()
         self.view?.updateTableViewUIEdgeInsets()
@@ -56,26 +78,14 @@ class RepoListingPresenterImp: RepoListingPresenter {
 
     func didInfiniteScroll() {
         if (currentPage ?? 0) < (lastPage ?? 0) {
-            let nextPage = (currentPage ?? 0) + 1
-            loadRepos(page: nextPage)
+            if let currentPage = currentPage {
+                self.view?.finishTableViewInfinteScrollWithCompletion()
+                self.currentPage = currentPage + 1
+            }
         } else {
             self.view?.finishTableViewInfiniteScroll()
             self.view?.removeTableViewUIEdgeInsets()
         }
-    }
-
-    func loadRepos(page: Int){
-        let firstIndex = (10 * page)
-        var lastIndex = firstIndex
-        if (lastIndex + 10) <= (reposOriginalArray.count - 1) {
-            lastIndex += 10
-        }else{
-            lastIndex = reposOriginalArray.count
-        }
-        
-        getRepoDetails(fromindex: firstIndex, toIndex: lastIndex)
-        
-        self.currentPage = page
     }
     
     func searchFor(_ word: String?) {
@@ -84,6 +94,7 @@ class RepoListingPresenterImp: RepoListingPresenter {
     }
 
     private func executeSearch(){
+        currentPage = 1
         if let query = searchWord, query != ""{
             reposArray.removeAll()
             for repo in reposOriginalArray {
@@ -124,15 +135,18 @@ class RepoListingPresenterImp: RepoListingPresenter {
     
     func handleGetReposSuccess(repos: [Repository]){
         self.reposOriginalArray = repos
-        self.currentPage = 0
-        self.lastPage = Int(Double(repos.count / 10).rounded(.up)) - 1
-        self.loadRepos(page: 0)
+        self.currentPage = 1
+        self.lastPage = Int(Double(repos.count / singlePageCount).rounded(.up))
+        getRepoDetails(isFirstPage: true)
     }
     
-    private func getRepoDetails(fromindex: Int, toIndex: Int){
+    private func getRepoDetails(isFirstPage: Bool = false){
         let getRepoDetailsGroup = DispatchGroup()
 
-        for i in fromindex..<toIndex {
+        let firstIndex = isFirstPage ? 0 : 10
+        let lastIndex = isFirstPage ? 10 : reposOriginalArray.count
+        
+        for i in firstIndex..<lastIndex{
             getRepoDetailsGroup.enter()
             let repo = reposOriginalArray[i]
             let path = Path.repoDetails.rawValue + repo.fullName
@@ -156,15 +170,13 @@ class RepoListingPresenterImp: RepoListingPresenter {
         }
         
         getRepoDetailsGroup.notify(queue: .main) {
-            self.reposArray = Array(self.reposOriginalArray.prefix(toIndex))
-            if fromindex == 0 {
-                // This the the first load after the Get All Repos Request
+            self.reposArray = self.reposOriginalArray
+            if isFirstPage {
                 self.view?.hideShimmering()
                 self.view?.reloadTableView()
-            }else {
-                // This is infinite Scroll
-                self.view?.finishTableViewInfinteScrollWithCompletion()
+                self.getRepoDetails(isFirstPage: false)
             }
         }
     }
+    
 }

@@ -15,10 +15,11 @@ protocol RepoListingView {
     func finishTableViewInfinteScrollWithCompletion()
     func updateTableViewUIEdgeInsets()
     func removeTableViewUIEdgeInsets()
+    func navigateToRepoDetailsDetailsView(repo: Repository)
 }
 
 class RepoListingViewController: UIViewController, RepoListingView {
-
+    
     @IBOutlet weak var reposTableView: UITableView!
     @IBOutlet weak var searchTF: UITextField!
     @IBOutlet weak var searchClearButton: UIButton!
@@ -27,13 +28,13 @@ class RepoListingViewController: UIViewController, RepoListingView {
     private var loadingTableData = true
     var presenter: RepoListingPresenter!
     private let refreshControl = UIRefreshControl()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach(view: self)
         setupViews()
     }
-
+    
     func setupViews(){
         setupTableView()
         setupClearButton(hide: true)
@@ -64,6 +65,8 @@ class RepoListingViewController: UIViewController, RepoListingView {
     }
     
     @objc private func refreshData(_ sender: Any) {
+        searchTF.text = nil
+        setupClearButton(hide: true)
         presenter.didPullToRefresh()
     }
     
@@ -113,13 +116,18 @@ class RepoListingViewController: UIViewController, RepoListingView {
     @IBAction func didChangeEditingForSearchTF(_ sender: UITextField) {
         if let query = sender.text, query != "" {
             setupClearButton(hide: false)
-            if query.count > 1 {
-                self.presenter.searchFor(sender.text)
-            }
+            //            if query.count > 1 {
+            self.presenter.searchFor(sender.text)
+            //            }
         } else {
             setupClearButton(hide: true)
             self.presenter.searchFor(nil)
         }
+    }
+    
+    func navigateToRepoDetailsDetailsView(repo: Repository) {
+        let repoDetailsVC = RepoDetailsViewController()
+        self.navigationController?.pushViewController(repoDetailsVC, animated: true)
     }
 }
 
@@ -145,6 +153,8 @@ extension RepoListingViewController: UITableViewDataSource {
 extension RepoListingViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // navigate to details
+        if !loadingTableData {
+            self.presenter.didSelecetRepo(indexPath: indexPath)
+        }
     }
 }
