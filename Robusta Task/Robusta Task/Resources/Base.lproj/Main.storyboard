@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oXa-ax-ots">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Navigation Controller-->
+        <scene sceneID="c7Y-ow-Ils">
+            <objects>
+                <navigationController id="oXa-ax-ots" customClass="CustomNavigationController" customModule="Robusta_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ab-Xs-tPB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="n7K-Si-FKm" kind="relationship" relationship="rootViewController" id="XWJ-sF-bgy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQE-K7-DO6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-762" y="194"/>
+        </scene>
+        <!--Repo Listing View Controller-->
+        <scene sceneID="n0F-nA-Haa">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wuN-Po-Yi6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="n7K-Si-FKm" customClass="RepoListingViewController" customModule="Robusta_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZQ1-l4-Ujv"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="58" y="194"/>
+        </scene>
+    </scenes>
+</document>
