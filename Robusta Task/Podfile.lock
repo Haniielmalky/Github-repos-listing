@@ -1,0 +1,20 @@
+PODS:
+  - IQKeyboardManagerSwift (6.5.6)
+  - UIScrollView-InfiniteScroll (1.1.0)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - UIScrollView-InfiniteScroll
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - UIScrollView-InfiniteScroll
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
+
+PODFILE CHECKSUM: b64bbe4b3fc0c289c25e507539d0dd7091b9a369
+
+COCOAPODS: 1.11.2

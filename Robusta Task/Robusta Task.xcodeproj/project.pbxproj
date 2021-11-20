@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		581FA2952746F41400EA4E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581FA2942746F41400EA4E3B /* AppDelegate.swift */; };
 		581FA2972746F41400EA4E3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581FA2962746F41400EA4E3B /* SceneDelegate.swift */; };
-		581FA2992746F41400EA4E3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581FA2982746F41400EA4E3B /* ViewController.swift */; };
 		581FA29C2746F41400EA4E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 581FA29A2746F41400EA4E3B /* Main.storyboard */; };
 		581FA29E2746F41700EA4E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 581FA29D2746F41700EA4E3B /* Assets.xcassets */; };
 		581FA2A12746F41700EA4E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 581FA29F2746F41700EA4E3B /* LaunchScreen.storyboard */; };
@@ -17,13 +16,27 @@
 		581FA2B72747158B00EA4E3B /* Service Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581FA2B62747158B00EA4E3B /* Service Manager.swift */; };
 		581FA2BA274732F000EA4E3B /* Network Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581FA2B9274732F000EA4E3B /* Network Error.swift */; };
 		581FA2BC27481DE100EA4E3B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581FA2BB27481DE100EA4E3B /* Endpoint.swift */; };
+		584113CA2749129D006746F0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584113C92749129D006746F0 /* String+Extension.swift */; };
+		584113CE27492A37006746F0 /* RepoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584113CC27492A37006746F0 /* RepoDetailsViewController.swift */; };
+		584113CF27492A37006746F0 /* RepoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584113CD27492A37006746F0 /* RepoDetailsViewController.xib */; };
+		584113D127492A45006746F0 /* RepoDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584113D027492A45006746F0 /* RepoDetailsPresenter.swift */; };
+		587D2D0927482D580003E8E1 /* RepoListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D2D0727482D580003E8E1 /* RepoListingViewController.swift */; };
+		587D2D0A27482D580003E8E1 /* RepoListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587D2D0827482D580003E8E1 /* RepoListingViewController.xib */; };
+		587D2D1327482E350003E8E1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D2D1227482E350003E8E1 /* UIView+Extension.swift */; };
+		587D2D1627482F970003E8E1 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D2D1427482F970003E8E1 /* RepoTableViewCell.swift */; };
+		587D2D1727482F970003E8E1 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587D2D1527482F970003E8E1 /* RepoTableViewCell.xib */; };
+		587D2D1927483ED40003E8E1 /* RepoListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D2D1827483ED40003E8E1 /* RepoListingPresenter.swift */; };
+		587D2D1C274840390003E8E1 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D2D1B274840390003E8E1 /* Repository.swift */; };
+		587D2D20274861620003E8E1 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D2D1F274861620003E8E1 /* Loader.swift */; };
+		587D2D22274865190003E8E1 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D2D21274865190003E8E1 /* Owner.swift */; };
+		587D2D2527486B5F0003E8E1 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D2D2427486B5F0003E8E1 /* CustomNavigationController.swift */; };
+		6C535CA46FB22D9D97EB6D42 /* Pods_Robusta_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A6F4B1D69D63D1BF689DAE /* Pods_Robusta_Task.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		581FA2912746F41400EA4E3B /* Robusta Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Robusta Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		581FA2942746F41400EA4E3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		581FA2962746F41400EA4E3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		581FA2982746F41400EA4E3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		581FA29B2746F41400EA4E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		581FA29D2746F41700EA4E3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		581FA2A02746F41700EA4E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +45,24 @@
 		581FA2B62747158B00EA4E3B /* Service Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service Manager.swift"; sourceTree = "<group>"; };
 		581FA2B9274732F000EA4E3B /* Network Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Error.swift"; sourceTree = "<group>"; };
 		581FA2BB27481DE100EA4E3B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		584113C82748F675006746F0 /* Robusta-Task-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Robusta-Task-Bridging-Header.h"; sourceTree = "<group>"; };
+		584113C92749129D006746F0 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		584113CC27492A37006746F0 /* RepoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewController.swift; sourceTree = "<group>"; };
+		584113CD27492A37006746F0 /* RepoDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoDetailsViewController.xib; sourceTree = "<group>"; };
+		584113D027492A45006746F0 /* RepoDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsPresenter.swift; sourceTree = "<group>"; };
+		587D2D0727482D580003E8E1 /* RepoListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListingViewController.swift; sourceTree = "<group>"; };
+		587D2D0827482D580003E8E1 /* RepoListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoListingViewController.xib; sourceTree = "<group>"; };
+		587D2D1227482E350003E8E1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		587D2D1427482F970003E8E1 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		587D2D1527482F970003E8E1 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
+		587D2D1827483ED40003E8E1 /* RepoListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListingPresenter.swift; sourceTree = "<group>"; };
+		587D2D1B274840390003E8E1 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		587D2D1F274861620003E8E1 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		587D2D21274865190003E8E1 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		587D2D2427486B5F0003E8E1 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		5C8A5EEFF969764C05DB1A35 /* Pods-Robusta Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robusta Task.debug.xcconfig"; path = "Target Support Files/Pods-Robusta Task/Pods-Robusta Task.debug.xcconfig"; sourceTree = "<group>"; };
+		75A6F4B1D69D63D1BF689DAE /* Pods_Robusta_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Robusta_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80203FC31A8D6C33B6F20964 /* Pods-Robusta Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robusta Task.release.xcconfig"; path = "Target Support Files/Pods-Robusta Task/Pods-Robusta Task.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C535CA46FB22D9D97EB6D42 /* Pods_Robusta_Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +82,8 @@
 			children = (
 				581FA2932746F41400EA4E3B /* Robusta Task */,
 				581FA2922746F41400EA4E3B /* Products */,
+				E9361E5735FD62717167129C /* Pods */,
+				B6E191A3942F3C89EADAA4B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,26 +98,24 @@
 		581FA2932746F41400EA4E3B /* Robusta Task */ = {
 			isa = PBXGroup;
 			children = (
-				581FA2B52747156900EA4E3B /* Service Manager */,
-				581FA2A82746F49800EA4E3B /* Network Layer */,
-				581FA2942746F41400EA4E3B /* AppDelegate.swift */,
-				581FA2962746F41400EA4E3B /* SceneDelegate.swift */,
-				581FA2982746F41400EA4E3B /* ViewController.swift */,
-				581FA29A2746F41400EA4E3B /* Main.storyboard */,
-				581FA29D2746F41700EA4E3B /* Assets.xcassets */,
-				581FA29F2746F41700EA4E3B /* LaunchScreen.storyboard */,
+				587D2D2327486B320003E8E1 /* Bases */,
+				587D2D1027482E210003E8E1 /* Extension */,
+				587D2D0527482C950003E8E1 /* Scenes */,
+				587D2D0327482C400003E8E1 /* App Delegate */,
+				581FA2B52747156900EA4E3B /* Services Manager */,
+				587D2D0427482C750003E8E1 /* Resources */,
 				581FA2A22746F41700EA4E3B /* Info.plist */,
 			);
 			path = "Robusta Task";
 			sourceTree = "<group>";
 		};
-		581FA2A82746F49800EA4E3B /* Network Layer */ = {
+		581FA2A82746F49800EA4E3B /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				581FA2B8274732C700EA4E3B /* Network Error */,
 				581FA2A92746F4CB00EA4E3B /* Network Service */,
 			);
-			path = "Network Layer";
+			path = Network;
 			sourceTree = "<group>";
 		};
 		581FA2A92746F4CB00EA4E3B /* Network Service */ = {
@@ -95,12 +127,14 @@
 			path = "Network Service";
 			sourceTree = "<group>";
 		};
-		581FA2B52747156900EA4E3B /* Service Manager */ = {
+		581FA2B52747156900EA4E3B /* Services Manager */ = {
 			isa = PBXGroup;
 			children = (
+				587D2D1A2748400C0003E8E1 /* Models */,
+				581FA2A82746F49800EA4E3B /* Network */,
 				581FA2B62747158B00EA4E3B /* Service Manager.swift */,
 			);
-			path = "Service Manager";
+			path = "Services Manager";
 			sourceTree = "<group>";
 		};
 		581FA2B8274732C700EA4E3B /* Network Error */ = {
@@ -111,6 +145,109 @@
 			path = "Network Error";
 			sourceTree = "<group>";
 		};
+		584113CB27492A1F006746F0 /* Repo Details */ = {
+			isa = PBXGroup;
+			children = (
+				584113CC27492A37006746F0 /* RepoDetailsViewController.swift */,
+				584113CD27492A37006746F0 /* RepoDetailsViewController.xib */,
+				584113D027492A45006746F0 /* RepoDetailsPresenter.swift */,
+			);
+			path = "Repo Details";
+			sourceTree = "<group>";
+		};
+		587D2D0327482C400003E8E1 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				581FA2942746F41400EA4E3B /* AppDelegate.swift */,
+				581FA2962746F41400EA4E3B /* SceneDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		587D2D0427482C750003E8E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				581FA29A2746F41400EA4E3B /* Main.storyboard */,
+				581FA29D2746F41700EA4E3B /* Assets.xcassets */,
+				581FA29F2746F41700EA4E3B /* LaunchScreen.storyboard */,
+				584113C82748F675006746F0 /* Robusta-Task-Bridging-Header.h */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		587D2D0527482C950003E8E1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				584113CB27492A1F006746F0 /* Repo Details */,
+				587D2D0627482D2D0003E8E1 /* Repos Listing */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		587D2D0627482D2D0003E8E1 /* Repos Listing */ = {
+			isa = PBXGroup;
+			children = (
+				587D2D0B27482D8B0003E8E1 /* Cell */,
+				587D2D0727482D580003E8E1 /* RepoListingViewController.swift */,
+				587D2D0827482D580003E8E1 /* RepoListingViewController.xib */,
+				587D2D1827483ED40003E8E1 /* RepoListingPresenter.swift */,
+			);
+			path = "Repos Listing";
+			sourceTree = "<group>";
+		};
+		587D2D0B27482D8B0003E8E1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				587D2D1427482F970003E8E1 /* RepoTableViewCell.swift */,
+				587D2D1527482F970003E8E1 /* RepoTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		587D2D1027482E210003E8E1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				587D2D1227482E350003E8E1 /* UIView+Extension.swift */,
+				587D2D1F274861620003E8E1 /* Loader.swift */,
+				584113C92749129D006746F0 /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		587D2D1A2748400C0003E8E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				587D2D1B274840390003E8E1 /* Repository.swift */,
+				587D2D21274865190003E8E1 /* Owner.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		587D2D2327486B320003E8E1 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				587D2D2427486B5F0003E8E1 /* CustomNavigationController.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		B6E191A3942F3C89EADAA4B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75A6F4B1D69D63D1BF689DAE /* Pods_Robusta_Task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9361E5735FD62717167129C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C8A5EEFF969764C05DB1A35 /* Pods-Robusta Task.debug.xcconfig */,
+				80203FC31A8D6C33B6F20964 /* Pods-Robusta Task.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +255,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 581FA2A52746F41700EA4E3B /* Build configuration list for PBXNativeTarget "Robusta Task" */;
 			buildPhases = (
+				06F7EB0869D67FA65C4B4128 /* [CP] Check Pods Manifest.lock */,
 				581FA28D2746F41400EA4E3B /* Sources */,
 				581FA28E2746F41400EA4E3B /* Frameworks */,
 				581FA28F2746F41400EA4E3B /* Resources */,
+				2A99DDF9CF5208F3796ED9E4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,24 +309,79 @@
 			buildActionMask = 2147483647;
 			files = (
 				581FA2A12746F41700EA4E3B /* LaunchScreen.storyboard in Resources */,
+				584113CF27492A37006746F0 /* RepoDetailsViewController.xib in Resources */,
+				587D2D0A27482D580003E8E1 /* RepoListingViewController.xib in Resources */,
 				581FA29E2746F41700EA4E3B /* Assets.xcassets in Resources */,
 				581FA29C2746F41400EA4E3B /* Main.storyboard in Resources */,
+				587D2D1727482F970003E8E1 /* RepoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06F7EB0869D67FA65C4B4128 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Robusta Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A99DDF9CF5208F3796ED9E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Robusta Task/Pods-Robusta Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Robusta Task/Pods-Robusta Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Robusta Task/Pods-Robusta Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		581FA28D2746F41400EA4E3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				587D2D22274865190003E8E1 /* Owner.swift in Sources */,
 				581FA2B72747158B00EA4E3B /* Service Manager.swift in Sources */,
+				587D2D0927482D580003E8E1 /* RepoListingViewController.swift in Sources */,
+				587D2D20274861620003E8E1 /* Loader.swift in Sources */,
 				581FA2BA274732F000EA4E3B /* Network Error.swift in Sources */,
-				581FA2992746F41400EA4E3B /* ViewController.swift in Sources */,
+				584113CE27492A37006746F0 /* RepoDetailsViewController.swift in Sources */,
+				587D2D1927483ED40003E8E1 /* RepoListingPresenter.swift in Sources */,
+				587D2D2527486B5F0003E8E1 /* CustomNavigationController.swift in Sources */,
+				587D2D1627482F970003E8E1 /* RepoTableViewCell.swift in Sources */,
+				587D2D1C274840390003E8E1 /* Repository.swift in Sources */,
+				584113D127492A45006746F0 /* RepoDetailsPresenter.swift in Sources */,
+				587D2D1327482E350003E8E1 /* UIView+Extension.swift in Sources */,
 				581FA2BC27481DE100EA4E3B /* Endpoint.swift in Sources */,
 				581FA2952746F41400EA4E3B /* AppDelegate.swift in Sources */,
 				581FA2AB2747040600EA4E3B /* Request Manager.swift in Sources */,
+				584113CA2749129D006746F0 /* String+Extension.swift in Sources */,
 				581FA2972746F41400EA4E3B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +526,7 @@
 		};
 		581FA2A62746F41700EA4E3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C8A5EEFF969764C05DB1A35 /* Pods-Robusta Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -354,6 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haniielmalky.Robusta-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Robusta Task/Resources/Robusta-Task-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -361,6 +557,7 @@
 		};
 		581FA2A72746F41700EA4E3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80203FC31A8D6C33B6F20964 /* Pods-Robusta Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -383,6 +580,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haniielmalky.Robusta-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Robusta Task/Resources/Robusta-Task-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
