@@ -33,12 +33,11 @@ class RepoTableViewCell: UITableViewCell, RepoCell {
 
     private func setOwnerAvatar(imageUrl: String) {
         let imagePlaceHolder = UIImage(named: "placeholder_img")
+        ownerAvatarImageView.image = imagePlaceHolder
         RequestManager.shared.downloadRequest(imageUrl: imageUrl) { (data, error) in
             if let imageData = data, let avatarImage = UIImage(data: imageData) {
                 self.ownerAvatarImageView.image = avatarImage
-            } else {
-                self.ownerAvatarImageView.image = imagePlaceHolder
-            }
+            } 
         }
     }
 }

@@ -12,11 +12,11 @@ import Foundation
 struct Endpoint {
     
     var httpMethod: HTTPMethod
-    var path: Path
+    var path: String
     var queryItems: [URLQueryItem]?
     var headers: [HTTPHeader: String]?
     
-    init(method: HTTPMethod, path: Path, queryItems: [URLQueryItem]? = nil, headers: [HTTPHeader: String]? = nil) {
+    init(method: HTTPMethod, path: String, queryItems: [URLQueryItem]? = nil, headers: [HTTPHeader: String]? = nil) {
         self.httpMethod = method
         self.path = path
         self.queryItems = queryItems
@@ -25,7 +25,7 @@ struct Endpoint {
     
     var url: URL? {
         guard var urlComponents = URLComponents(string: baseUrl) else { return nil }
-        urlComponents.path = path.rawValue
+        urlComponents.path = path
         urlComponents.queryItems = queryItems
         
         return urlComponents.url

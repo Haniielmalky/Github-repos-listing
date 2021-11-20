@@ -16,6 +16,7 @@
 		581FA2B72747158B00EA4E3B /* Service Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581FA2B62747158B00EA4E3B /* Service Manager.swift */; };
 		581FA2BA274732F000EA4E3B /* Network Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581FA2B9274732F000EA4E3B /* Network Error.swift */; };
 		581FA2BC27481DE100EA4E3B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581FA2BB27481DE100EA4E3B /* Endpoint.swift */; };
+		584113CA2749129D006746F0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584113C92749129D006746F0 /* String+Extension.swift */; };
 		587D2D0927482D580003E8E1 /* RepoListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D2D0727482D580003E8E1 /* RepoListingViewController.swift */; };
 		587D2D0A27482D580003E8E1 /* RepoListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587D2D0827482D580003E8E1 /* RepoListingViewController.xib */; };
 		587D2D1327482E350003E8E1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D2D1227482E350003E8E1 /* UIView+Extension.swift */; };
@@ -26,6 +27,7 @@
 		587D2D20274861620003E8E1 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D2D1F274861620003E8E1 /* Loader.swift */; };
 		587D2D22274865190003E8E1 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D2D21274865190003E8E1 /* Owner.swift */; };
 		587D2D2527486B5F0003E8E1 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D2D2427486B5F0003E8E1 /* CustomNavigationController.swift */; };
+		6C535CA46FB22D9D97EB6D42 /* Pods_Robusta_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A6F4B1D69D63D1BF689DAE /* Pods_Robusta_Task.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		581FA2B62747158B00EA4E3B /* Service Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service Manager.swift"; sourceTree = "<group>"; };
 		581FA2B9274732F000EA4E3B /* Network Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Error.swift"; sourceTree = "<group>"; };
 		581FA2BB27481DE100EA4E3B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		584113C82748F675006746F0 /* Robusta-Task-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Robusta-Task-Bridging-Header.h"; sourceTree = "<group>"; };
+		584113C92749129D006746F0 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		587D2D0727482D580003E8E1 /* RepoListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListingViewController.swift; sourceTree = "<group>"; };
 		587D2D0827482D580003E8E1 /* RepoListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoListingViewController.xib; sourceTree = "<group>"; };
 		587D2D1227482E350003E8E1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -50,6 +54,9 @@
 		587D2D1F274861620003E8E1 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		587D2D21274865190003E8E1 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		587D2D2427486B5F0003E8E1 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		5C8A5EEFF969764C05DB1A35 /* Pods-Robusta Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robusta Task.debug.xcconfig"; path = "Target Support Files/Pods-Robusta Task/Pods-Robusta Task.debug.xcconfig"; sourceTree = "<group>"; };
+		75A6F4B1D69D63D1BF689DAE /* Pods_Robusta_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Robusta_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80203FC31A8D6C33B6F20964 /* Pods-Robusta Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robusta Task.release.xcconfig"; path = "Target Support Files/Pods-Robusta Task/Pods-Robusta Task.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C535CA46FB22D9D97EB6D42 /* Pods_Robusta_Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +76,8 @@
 			children = (
 				581FA2932746F41400EA4E3B /* Robusta Task */,
 				581FA2922746F41400EA4E3B /* Products */,
+				E9361E5735FD62717167129C /* Pods */,
+				B6E191A3942F3C89EADAA4B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +154,7 @@
 				581FA29A2746F41400EA4E3B /* Main.storyboard */,
 				581FA29D2746F41700EA4E3B /* Assets.xcassets */,
 				581FA29F2746F41700EA4E3B /* LaunchScreen.storyboard */,
+				584113C82748F675006746F0 /* Robusta-Task-Bridging-Header.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -181,6 +192,7 @@
 			children = (
 				587D2D1227482E350003E8E1 /* UIView+Extension.swift */,
 				587D2D1F274861620003E8E1 /* Loader.swift */,
+				584113C92749129D006746F0 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -202,6 +214,23 @@
 			path = Bases;
 			sourceTree = "<group>";
 		};
+		B6E191A3942F3C89EADAA4B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75A6F4B1D69D63D1BF689DAE /* Pods_Robusta_Task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9361E5735FD62717167129C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C8A5EEFF969764C05DB1A35 /* Pods-Robusta Task.debug.xcconfig */,
+				80203FC31A8D6C33B6F20964 /* Pods-Robusta Task.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 581FA2A52746F41700EA4E3B /* Build configuration list for PBXNativeTarget "Robusta Task" */;
 			buildPhases = (
+				06F7EB0869D67FA65C4B4128 /* [CP] Check Pods Manifest.lock */,
 				581FA28D2746F41400EA4E3B /* Sources */,
 				581FA28E2746F41400EA4E3B /* Frameworks */,
 				581FA28F2746F41400EA4E3B /* Resources */,
+				2A99DDF9CF5208F3796ED9E4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,6 +301,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06F7EB0869D67FA65C4B4128 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Robusta Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A99DDF9CF5208F3796ED9E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Robusta Task/Pods-Robusta Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Robusta Task/Pods-Robusta Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Robusta Task/Pods-Robusta Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		581FA28D2746F41400EA4E3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -288,6 +361,7 @@
 				581FA2BC27481DE100EA4E3B /* Endpoint.swift in Sources */,
 				581FA2952746F41400EA4E3B /* AppDelegate.swift in Sources */,
 				581FA2AB2747040600EA4E3B /* Request Manager.swift in Sources */,
+				584113CA2749129D006746F0 /* String+Extension.swift in Sources */,
 				581FA2972746F41400EA4E3B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +506,7 @@
 		};
 		581FA2A62746F41700EA4E3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C8A5EEFF969764C05DB1A35 /* Pods-Robusta Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -454,6 +529,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haniielmalky.Robusta-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Robusta Task/Resources/Robusta-Task-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -461,6 +537,7 @@
 		};
 		581FA2A72746F41700EA4E3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80203FC31A8D6C33B6F20964 /* Pods-Robusta Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -483,6 +560,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haniielmalky.Robusta-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Robusta Task/Resources/Robusta-Task-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

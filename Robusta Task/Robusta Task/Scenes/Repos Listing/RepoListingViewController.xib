@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepoListingViewController" customModule="Robusta_Task" customModuleProvider="target">
             <connections>
                 <outlet property="reposTableView" destination="lgS-6r-d1L" id="JDv-MS-9Od"/>
+                <outlet property="searchClearButton" destination="f7y-EA-DQt" id="tc1-Zy-IYK"/>
+                <outlet property="searchTF" destination="lT2-JC-52b" id="vT5-Rk-5dI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,26 +22,96 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="20" estimatedSectionHeaderHeight="-1" sectionFooterHeight="20" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lgS-6r-d1L">
-                    <rect key="frame" x="20" y="144" width="374" height="718"/>
+                    <rect key="frame" x="20" y="134" width="374" height="728"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Y9R-Ez-miv"/>
                         <outlet property="delegate" destination="-1" id="6i9-GT-92i"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOG-fi-DTP">
+                    <rect key="frame" x="20" y="64" width="374" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rb-GP-efD">
+                            <rect key="frame" x="324" y="0.0" width="50" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="7Rb-GP-efD" secondAttribute="height" id="03d-tL-Dwj"/>
+                            </constraints>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="magnifyingglass" catalog="system">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="didClickSearchButton:" destination="-1" eventType="touchUpInside" id="Udz-sp-NhA"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search by repository name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lT2-JC-52b">
+                            <rect key="frame" x="10" y="8" width="270" height="34"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="didChangeEditingForSearchTF:" destination="-1" eventType="editingChanged" id="Lte-La-ysa"/>
+                            </connections>
+                        </textField>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7y-EA-DQt">
+                            <rect key="frame" x="292" y="13" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="34K-Dm-5PD"/>
+                                <constraint firstAttribute="width" secondItem="f7y-EA-DQt" secondAttribute="height" id="vXH-zc-Sjb"/>
+                            </constraints>
+                            <color key="tintColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                            <connections>
+                                <action selector="didClickClearSearchButton:" destination="-1" eventType="touchUpInside" id="bfU-MT-eZw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="f7y-EA-DQt" firstAttribute="centerY" secondItem="zOG-fi-DTP" secondAttribute="centerY" id="C4y-f1-pkY"/>
+                        <constraint firstAttribute="bottom" secondItem="lT2-JC-52b" secondAttribute="bottom" constant="8" id="HlK-JN-y65"/>
+                        <constraint firstAttribute="bottom" secondItem="7Rb-GP-efD" secondAttribute="bottom" id="OYR-FZ-RLs"/>
+                        <constraint firstAttribute="height" constant="50" id="W6w-cp-Oi1"/>
+                        <constraint firstItem="lT2-JC-52b" firstAttribute="leading" secondItem="zOG-fi-DTP" secondAttribute="leading" constant="10" id="bl5-Xc-nvf"/>
+                        <constraint firstItem="7Rb-GP-efD" firstAttribute="leading" secondItem="f7y-EA-DQt" secondAttribute="trailing" constant="8" id="d72-LC-9Tm"/>
+                        <constraint firstAttribute="trailing" secondItem="7Rb-GP-efD" secondAttribute="trailing" id="pgY-uv-B5x"/>
+                        <constraint firstItem="f7y-EA-DQt" firstAttribute="leading" secondItem="lT2-JC-52b" secondAttribute="trailing" constant="12" id="t3B-yJ-mXU"/>
+                        <constraint firstItem="7Rb-GP-efD" firstAttribute="top" secondItem="zOG-fi-DTP" secondAttribute="top" id="y0X-Tw-m37"/>
+                        <constraint firstItem="lT2-JC-52b" firstAttribute="top" secondItem="zOG-fi-DTP" secondAttribute="top" constant="8" id="yTc-wA-fW8"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="lgS-6r-d1L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="LS5-zv-BxL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lgS-6r-d1L" secondAttribute="bottom" id="Mhp-tk-iB9"/>
-                <constraint firstItem="lgS-6r-d1L" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="XHV-gU-ptj"/>
+                <constraint firstItem="zOG-fi-DTP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Qty-6g-Vl0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lgS-6r-d1L" secondAttribute="trailing" constant="20" id="Zkp-al-hXU"/>
+                <constraint firstItem="lgS-6r-d1L" firstAttribute="top" secondItem="zOG-fi-DTP" secondAttribute="bottom" constant="20" id="aFL-tT-ChV"/>
+                <constraint firstItem="zOG-fi-DTP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="cN0-n0-skc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zOG-fi-DTP" secondAttribute="trailing" constant="20" id="uBA-nN-FFS"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

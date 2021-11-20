@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupIQKeyboard()
         return true
     }
 
@@ -34,3 +35,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK: - IQKeyboardManager
+
+extension AppDelegate {
+    func setupIQKeyboard(){
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = true
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Done"
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
+        IQKeyboardManager.shared.goNext()
+        IQKeyboardManager.shared.goPrevious()
+        IQKeyboardManager.shared.previousNextDisplayMode = .default
+    }
+}

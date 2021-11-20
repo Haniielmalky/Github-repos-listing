@@ -23,6 +23,7 @@ enum Path : String {
     
     // General
     case repos = "/repositories"
+    case repoDetails = "/repos/"
     
 }
 

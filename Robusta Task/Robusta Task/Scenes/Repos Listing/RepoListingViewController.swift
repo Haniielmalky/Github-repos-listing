@@ -11,16 +11,23 @@ protocol RepoListingView {
     func reloadTableView()
     func showShimmering()
     func hideShimmering()
+    func finishTableViewInfiniteScroll()
+    func finishTableViewInfinteScrollWithCompletion()
+    func updateTableViewUIEdgeInsets()
+    func removeTableViewUIEdgeInsets()
 }
 
 class RepoListingViewController: UIViewController, RepoListingView {
 
     @IBOutlet weak var reposTableView: UITableView!
+    @IBOutlet weak var searchTF: UITextField!
+    @IBOutlet weak var searchClearButton: UIButton!
     
     private var repoCellId = "RepoTableViewCell"
     private var loadingTableData = true
     var presenter: RepoListingPresenter!
-    
+    private let refreshControl = UIRefreshControl()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach(view: self)
@@ -29,6 +36,9 @@ class RepoListingViewController: UIViewController, RepoListingView {
 
     func setupViews(){
         setupTableView()
+        setupClearButton(hide: true)
+        setupRefreshControl()
+        setupInfiniteScroll()
     }
     
     func setupTableView() {
@@ -37,6 +47,44 @@ class RepoListingViewController: UIViewController, RepoListingView {
         reposTableView.estimatedRowHeight = 70
         let repoCellNib = UINib(nibName: repoCellId, bundle: nil)
         reposTableView.register(repoCellNib, forCellReuseIdentifier: repoCellId)
+        reposTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 125, right: 0)
+    }
+    
+    func setupRefreshControl() {
+        reposTableView.addSubview(self.refreshControl)
+        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+    }
+    
+    func updateTableViewUIEdgeInsets() {
+        reposTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 125, right: 0)
+    }
+    
+    func removeTableViewUIEdgeInsets() {
+        reposTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    @objc private func refreshData(_ sender: Any) {
+        presenter.didPullToRefresh()
+    }
+    
+    private func setupInfiniteScroll() {
+        reposTableView.addInfiniteScroll { (_) in
+            self.presenter.didInfiniteScroll()
+        }
+    }
+    
+    func finishTableViewInfiniteScroll() {
+        reposTableView.finishInfiniteScroll()
+    }
+    
+    func finishTableViewInfinteScrollWithCompletion() {
+        reposTableView.finishInfiniteScroll { (tableView) in
+            tableView.reloadData()
+        }
+    }
+    
+    func setupClearButton(hide: Bool){
+        searchClearButton.isHidden = hide
     }
     
     func showShimmering() {
@@ -48,7 +96,30 @@ class RepoListingViewController: UIViewController, RepoListingView {
     }
     
     func reloadTableView(){
+        self.refreshControl.endRefreshing()
         reposTableView.reloadData()
+    }
+    
+    @IBAction func didClickSearchButton(_ sender: UIButton) {
+        self.presenter.searchFor(searchTF.text)
+    }
+    
+    @IBAction func didClickClearSearchButton(_ sender: UIButton) {
+        searchTF.text = nil
+        self.presenter.searchFor(nil)
+        self.setupClearButton(hide: true)
+    }
+    
+    @IBAction func didChangeEditingForSearchTF(_ sender: UITextField) {
+        if let query = sender.text, query != "" {
+            setupClearButton(hide: false)
+            if query.count > 1 {
+                self.presenter.searchFor(sender.text)
+            }
+        } else {
+            setupClearButton(hide: true)
+            self.presenter.searchFor(nil)
+        }
     }
 }
 
