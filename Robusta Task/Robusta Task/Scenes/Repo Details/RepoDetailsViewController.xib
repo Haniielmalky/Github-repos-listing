@@ -10,8 +10,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepoDetailsViewController" customModule="Robusta_Task" customModuleProvider="target">
             <connections>
+                <outlet property="createdDateLabel" destination="hpI-fP-avs" id="hnj-Hm-1U8"/>
+                <outlet property="descriptionContainerView" destination="4k0-c1-yIz" id="9Qq-vF-8Gm"/>
+                <outlet property="descriptionLabel" destination="Rm8-KQ-hXt" id="eDc-dj-RHW"/>
+                <outlet property="forkCountLabel" destination="Bqm-gj-ysk" id="gct-vu-CH5"/>
+                <outlet property="issueCountLabel" destination="Nw3-ce-qv6" id="6S0-zx-ayp"/>
+                <outlet property="languageLabel" destination="uas-3U-OeL" id="1CQ-2a-yeS"/>
+                <outlet property="lastUpdatedLabel" destination="qav-lc-Hie" id="eu8-qa-Y6l"/>
                 <outlet property="repoNameLabel" destination="VkA-BW-YHd" id="RWM-l6-7nd"/>
+                <outlet property="starCountLabel" destination="mae-jl-glW" id="Xf0-nh-oBe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="visibilityLabel" destination="5tm-kz-sin" id="dDY-z8-Xgd"/>
+                <outlet property="watcherCountLabel" destination="r9V-ke-gys" id="FsC-Ao-APP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -75,7 +85,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oax-gQ-Vju">
-                    <rect key="frame" x="20" y="178.5" width="374" height="210"/>
+                    <rect key="frame" x="20" y="182.5" width="374" height="210"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KUi-V6-h9a">
                             <rect key="frame" x="0.0" y="0.0" width="150" height="210"/>
@@ -183,10 +193,10 @@
                     </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4k0-c1-yIz">
-                    <rect key="frame" x="20" y="118" width="374" height="40.5"/>
+                    <rect key="frame" x="20" y="117" width="374" height="45.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rm8-KQ-hXt">
-                            <rect key="frame" x="12" y="12" width="350" height="20.5"/>
+                            <rect key="frame" x="12" y="13" width="350" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -194,10 +204,10 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="Rm8-KQ-hXt" firstAttribute="top" secondItem="4k0-c1-yIz" secondAttribute="top" constant="12" id="5Go-Wv-bHv"/>
+                        <constraint firstItem="Rm8-KQ-hXt" firstAttribute="top" secondItem="4k0-c1-yIz" secondAttribute="top" constant="13" id="5Go-Wv-bHv"/>
                         <constraint firstAttribute="trailing" secondItem="Rm8-KQ-hXt" secondAttribute="trailing" constant="12" id="97H-KH-Ek0"/>
                         <constraint firstItem="Rm8-KQ-hXt" firstAttribute="leading" secondItem="4k0-c1-yIz" secondAttribute="leading" constant="12" id="YJF-3p-P7A"/>
-                        <constraint firstAttribute="bottom" secondItem="Rm8-KQ-hXt" secondAttribute="bottom" constant="8" id="yR1-YU-W1r"/>
+                        <constraint firstAttribute="bottom" secondItem="Rm8-KQ-hXt" secondAttribute="bottom" constant="12" id="yR1-YU-W1r"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -215,7 +225,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4k0-c1-yIz" secondAttribute="trailing" constant="20" id="38t-yA-huy"/>
                 <constraint firstAttribute="trailing" secondItem="LN1-kB-zzj" secondAttribute="trailing" id="OWB-tK-hkY"/>
                 <constraint firstItem="4k0-c1-yIz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Q3h-mG-dbW"/>
-                <constraint firstItem="4k0-c1-yIz" firstAttribute="top" secondItem="LN1-kB-zzj" secondAttribute="bottom" id="Vdt-09-RRa"/>
+                <constraint firstItem="4k0-c1-yIz" firstAttribute="top" secondItem="LN1-kB-zzj" secondAttribute="bottom" constant="-1" id="Vdt-09-RRa"/>
                 <constraint firstItem="oax-gQ-Vju" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="aVH-nF-rrt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oax-gQ-Vju" secondAttribute="trailing" constant="20" id="fE9-Ru-7Sf"/>
                 <constraint firstItem="oax-gQ-Vju" firstAttribute="top" secondItem="4k0-c1-yIz" secondAttribute="bottom" constant="20" id="g3e-7u-gbV"/>
