@@ -116,9 +116,10 @@ class RepoListingViewController: UIViewController, RepoListingView {
     @IBAction func didChangeEditingForSearchTF(_ sender: UITextField) {
         if let query = sender.text, query != "" {
             setupClearButton(hide: false)
-            //            if query.count > 1 {
-            self.presenter.searchFor(sender.text)
-            //            }
+            // to make sure the search starts after two characters
+            if query.count > 1 {
+                self.presenter.searchFor(sender.text)
+            }
         } else {
             setupClearButton(hide: true)
             self.presenter.searchFor(nil)
@@ -127,6 +128,7 @@ class RepoListingViewController: UIViewController, RepoListingView {
     
     func navigateToRepoDetailsDetailsView(repo: Repository) {
         let repoDetailsVC = RepoDetailsViewController()
+        repoDetailsVC.presenter = RepoDetailsPresenterImp(repo: repo)
         self.navigationController?.pushViewController(repoDetailsVC, animated: true)
     }
 }
