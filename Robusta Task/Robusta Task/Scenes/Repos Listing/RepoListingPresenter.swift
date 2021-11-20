@@ -67,7 +67,7 @@ class RepoListingPresenterImp: RepoListingPresenter {
     }
     
     func didSelecetRepo(indexPath: IndexPath){
-        let repo = reposOriginalArray[indexPath.item]
+        let repo = reposArray[indexPath.item]
         self.view?.navigateToRepoDetailsDetailsView(repo: repo)
     }
     
